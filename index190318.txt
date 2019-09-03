@@ -1,0 +1,29 @@
+SICP ch1.1.7 Square Root Program
+SICP ch1.2.1 Factorial, recursive and iterative
+SICP ch1.2.2 Fib, fib-iter, recursive(divide-and-conquer) count-change
+SICP ch1.2.2 ex1.10 PY Recursive(divide-and-conquer) count-change with trace
+SICP ch1.2.4 Exponentiation: recursive, iterative, O(logn)-recursive
+SICP ch1.2.4 PY Exponentiation: recursive, iterative, O(logn)-recursive, O(logn)-iterative
+SICP ch1.2.5 Euclid's Algorithm (GCD)
+SICP ch1.2.6 ex1.16 ex1.17 Primality test: traditional O(sqrt(n)) and probabilistic O(klogn)
+SICP ch1.3.1 ex1.23-1.27 function as parameter: (sum term a next b)
+SICP ch1.3.3 Procedures as General Methods, find root and maximum
+SICP ex1.1 Simple Syntax test
+SICP ex1.11 Exponentiation: O(logn)-iterative
+SICP ex1.12 O(logn) "multiply"
+SICP ex1.14 Calculate fib by formula
+SICP ex1.15 PY GCD normal-order evaluation simulation
+SICP ex1.18 prime test with smallest-divisor-odd (similar to ch1.2.6)
+SICP ex1.19 prime test with fast-prime (similar to ch1.2.6)
+SICP ex1.2 TwoBiggestSquareSum
+SICP ex1.20 expmod-slow: expmod first, then take its remainder
+SICP ex1.21 expmod-slow: expmod(logn) without square, becomes O(n)
+SICP ex1.22 fermat-test-jacobi, cannot be fooled
+SICP ex1.3 applicative-order eval VS normal-order eval
+SICP ex1.4 Square Root Program with "new-if"
+SICP ex1.5 good-enough? Improvement
+SICP ex1.6 cube root & Newton's method abstraction(function as arguemant)
+SICP ex1.7 Two Recursive Procedures for Adding two N, Recursive and Iterative Process
+SICP ex1.8 Ackermann's Function, a non-primitive recursive function
+SICP ex1.9 Iterative count-change
+SICP ex1.9 PY Iterative count-change

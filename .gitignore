@@ -1,0 +1,8 @@
+# not needed
+/.vscode/
+
+# contain personal path name
+/indexGenerator.py
+
+# huge
+/sicp_from_web.mit.edu_alexmv_6.037_sicp.pdf

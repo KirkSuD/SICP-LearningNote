@@ -1,0 +1,58 @@
+#lang racket
+;SICP ex1.9 Iterative count-change
+
+(define (coin-list coin-index)
+  (cond ((= coin-index 0) 50)
+        ((= coin-index 1) 25)
+        ((= coin-index 2) 10)
+        ((= coin-index 3) 5)
+        ((= coin-index 4) 1)))
+
+(define (used-coin-list coin-index a b c d e)
+  (cond ((= coin-index 0) a)
+        ((= coin-index 1) b)
+        ((= coin-index 2) c)
+        ((= coin-index 3) d)
+        ((= coin-index 4) e)))
+
+(define (count-change-recursive amount)
+  (define (count-change-recur amount current-coin)
+    (cond ((= amount 0) 1)
+          ((or (< amount 0) (< current-coin 0)) 0)
+          (else (+ (count-change-recur (- amount (coin-list current-coin)) current-coin)
+                   (count-change-recur amount (- current-coin 1))))))
+  (count-change-recur amount 4))
+
+(define (count-change-iterative amount)
+  (define (count-change-iter res amount current-coin a b c d e)
+    (if (< amount 0)
+        (if (= (used-coin-list current-coin a b c d e) 0)
+            (count-change-iter res amount (- current-coin 1) a b c d e)
+            (if (= current-coin 0) res
+                (count-change-iter res (+ amount (* (used-coin-list current-coin a b c d e)
+                                                    (coin-list current-coin))
+                                          (- (coin-list (- current-coin 1))))
+                                   4
+                                   (if (= current-coin 0) 0 (if (= current-coin 1) (+ 1 a) a))
+                                   (if (= current-coin 1) 0 (if (= current-coin 2) (+ 1 b) b))
+                                   (if (= current-coin 2) 0 (if (= current-coin 3) (+ 1 c) c))
+                                   (if (= current-coin 3) 0 (if (= current-coin 4) (+ 1 d) d))
+                                   (if (= current-coin 4) 0 (if (= current-coin 5) (+ 1 e) e))
+                                   ))
+            )
+        (count-change-iter (+ (if (= amount 0) 1 0) res)
+                           (- amount (coin-list 4))
+                           current-coin a b c d (+ e 1))
+        )
+    )
+  (count-change-iter 0 amount 4 0 0 0 0 0)
+  )
+
+(define (for_range func current end)
+  (cond ((< current end) (display current) (display func) (display (func current)) (display "\n")
+                         (for_range func (+ 1 current) end))
+        (else (display "for_range finished.\n"))))
+(for_range count-change-recursive 0 101)
+(display "\n")
+(for_range count-change-iterative 0 101)
+
