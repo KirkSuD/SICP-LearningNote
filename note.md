@@ -562,7 +562,65 @@ See (nth), (length), (append) in it.
 
 #### Exercise 2.16-2.21
 
-File:  
+File: SICPch2.2.1.rkt, SICPex2.16.rkt, SICPex2.17.rkt, SICPex2.18.rkt, SICPex2.19.rkt, SICPex2.20.rkt, SICPex2.21.rkt  
 **Checkpoint: 190816, Page: 93, 2.2.1 done, TODO: ch2.2.1,ex2.16-2.21**
 
 ### 2.2.2 Representing Trees
+
+Representing sequences whose elements are sequences forms a tree:
+
+    ==> (cons (list 1 2) (list 3 4))
+    ((1 2) 3 4)
+
+My structure:
+
+    *   -   *
+    |       |
+    1 - *   3  -  *
+        |         |
+        2 - nil   4 - nil
+
+Box-and-pointer:
+
+    **-**-*/
+    |  3  4
+    **-*/
+    1  2
+
+Tree:
+
+    |
+    -------
+    |   | |
+    --- 3 4
+    | |
+    1 2
+
+#### Exercise 2.22-2.24
+
+File: SICPex2.22.rkt, SICPex2.23.rkt, SICPex2.24.rkt
+
+#### Recursion
+
+File: SICPch2.2.2.rkt
+
+Recursion is a natural tool to deal with tree structures.
+
+In addition to **null?**, Lisp provides **atom?** to test whether its argument
+ is atomic(not a pair).
+
+Length:
+
+    Empty: 0
+    Else: length of (cdr list) + 1
+
+Countatoms:
+
+    Empty: 0
+    Elif atomic: 1
+    Else: (countatoms (car list)) + (countatoms (cdr list))
+
+#### Exercise 2.25-2.27
+
+File:  
+**Checkpoint: 190910, Page: 100, 2.2.2 done, TODO: ex2.25-2.27**

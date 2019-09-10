@@ -14,6 +14,6 @@
 (count-change 100 uk-coins) ;; 104561
 
 ;; The order of coins doesn't affect the answer
-;; because its divide-and-conquer rule doesn't involve anything of orders,
-;; nothing would be counted twice or missed.
+;; because its reduction step(divide-and-conquer rule) doesn't involve
+;; anything of orders, nothing would be counted twice or missed.
 ;; Can be tested (but not proved) by rearrange the order of coins.
