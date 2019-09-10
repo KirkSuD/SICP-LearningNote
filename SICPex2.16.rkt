@@ -1,17 +1,12 @@
 #lang racket
-;;; SICP ex2.16 List operation: (append), (last), (reverse)
-
-;; ch2.2.1 P.93
-;; should be moved to SICPch2.2.1.rkt
-(define (append x y)
-  (if (null? x)
-      y
-      (cons (car x)
-            (append (cdr x) y))))
+;;; SICP ex2.16 List operation: (last)
 
 ;; ex2.16 P.93
 (define (last x)
-  (let (cdrx (cdr x))
-       (if (null? cdrx)
+  (let ((next (cdr x)))
+       (if (null? next)
            (cons (car x) '())
-           (last cdrx))))
+           (last next))))
+
+(define squares (list 1 4 9 16 25))
+(last squares)
