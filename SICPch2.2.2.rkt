@@ -1,6 +1,11 @@
 #lang racket
 ;;; SICP ch2.2.2 Recursion for trees: (countatoms)
 
+(define (atom? x)
+  (and (not (null? x))
+       (not (pair? x))))
+;; There's no atom? in Racket: https://stackoverflow.com/questions/24173903/drracket-atom-symbol-undefined-what-is-wrong
+
 ;; ch2.2.2 P.98
 (define (countatoms x)
   (cond ((null? x) 0)
