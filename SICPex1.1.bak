@@ -1,5 +1,0 @@
-#lang racket
-;SICP ex1.1
-10
-(+ 5 3 4)
-(

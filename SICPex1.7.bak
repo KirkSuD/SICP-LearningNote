@@ -1,4 +1,0 @@
-#lang racket
-;SICP ex1.6 cube root & Newton's method abstraction(function as arguemant)
-;
-()
