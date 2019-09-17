@@ -563,7 +563,7 @@ See (nth), (length), (append) in it.
 #### Exercise 2.16-2.21
 
 File: SICPch2.2.1.rkt, SICPex2.16.rkt, SICPex2.17.rkt, SICPex2.18.rkt, SICPex2.19.rkt, SICPex2.20.rkt, SICPex2.21.rkt  
-**Checkpoint: 190816, Page: 93, 2.2.1 done, TODO: ch2.2.1,ex2.16-2.21**
+**Checkpoint: 190816, Page: 93, 2.2.1 done, TODO: none**
 
 ### 2.2.2 Representing Trees
 
@@ -622,5 +622,9 @@ Countatoms:
 
 #### Exercise 2.25-2.27
 
-File:  
-**Checkpoint: 190910, Page: 100, 2.2.2 done, TODO: ex2.25-2.27**
+File: SICPex2.25.rkt, SICPex2.26.rkt, SICPex2.27.rkt
+
+**Checkpoint: 190911, Page: 100, 2.2.2 done, TODO: none**  
+Congratulations! Reached page 100! 🎉 You deserve a beer! 🍺
+
+### 2.2.3 Symbols and the Need for **Quote**

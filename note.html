@@ -1410,9 +1410,55 @@ See (nth), (length), (append) in it.</p>
 <p><em>cdring down</em>: (nth), (length)<br />
 <em>cons up</em> an answer/result list while cdring down a list: (append)</p>
 <h4>Exercise 2.16-2.21</h4>
-<p>File:<br />
-<strong>Checkpoint: 190816, Page: 93, 2.2.1 done, TODO: ex2.16-2.21</strong></p>
+<p>File: SICPch2.2.1.rkt, SICPex2.16.rkt, SICPex2.17.rkt, SICPex2.18.rkt, SICPex2.19.rkt, SICPex2.20.rkt, SICPex2.21.rkt<br />
+<strong>Checkpoint: 190816, Page: 93, 2.2.1 done, TODO: none</strong></p>
 <h3>2.2.2 Representing Trees</h3>
+<p>Representing sequences whose elements are sequences forms a tree:</p>
+<pre><code>==&gt; (cons (list 1 2) (list 3 4))
+((1 2) 3 4)
+</code></pre>
+<p>My structure:</p>
+<pre><code>*   -   *
+|       |
+1 - *   3  -  *
+    |         |
+    2 - nil   4 - nil
+</code></pre>
+<p>Box-and-pointer:</p>
+<pre><code>**-**-*/
+|  3  4
+**-*/
+1  2
+</code></pre>
+<p>Tree:</p>
+<pre><code>|
+-------
+|   | |
+--- 3 4
+| |
+1 2
+</code></pre>
+<h4>Exercise 2.22-2.24</h4>
+<p>File: SICPex2.22.rkt, SICPex2.23.rkt, SICPex2.24.rkt</p>
+<h4>Recursion</h4>
+<p>File: SICPch2.2.2.rkt</p>
+<p>Recursion is a natural tool to deal with tree structures.</p>
+<p>In addition to <strong>null?</strong>, Lisp provides <strong>atom?</strong> to test whether its argument
+ is atomic(not a pair).</p>
+<p>Length:</p>
+<pre><code>Empty: 0
+Else: length of (cdr list) + 1
+</code></pre>
+<p>Countatoms:</p>
+<pre><code>Empty: 0
+Elif atomic: 1
+Else: (countatoms (car list)) + (countatoms (cdr list))
+</code></pre>
+<h4>Exercise 2.25-2.27</h4>
+<p>File: SICPex2.25.rkt, SICPex2.26.rkt, SICPex2.27.rkt</p>
+<p><strong>Checkpoint: 190911, Page: 100, 2.2.2 done, TODO: none</strong><br />
+Congratulations! Reached page 100! 🎉 You deserve a beer! 🍺</p>
+<h3>2.2.3 Symbols and the Need for <strong>Quote</strong></h3>
 </article>
 </body>
 </html>
